@@ -1,0 +1,27 @@
+[project]
+name = "langgraph-agent"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "python-dotenv",
+  "langgraph",
+  "langchain-core",
+  "langchain-ollama",
+  "langchain-community",
+  "chromadb",
+  "pydantic>=2",
+  "tenacity",
+  "tldextract",
+  "wikipedia",
+  "wikipedia-api",
+  "modelcontextprotocol", # MCP SDK
+  "pypdf",
+  "httpx>=0.28.1",
+  "requests>=2.32.5",
+  "trafilatura>=2.0.0",
+  "beautifulsoup4>=4.14.2",
+]
+
+[tool.uv]
+# Force copy mode to avoid hardlink errors on Windows
+link-mode = "copy"
